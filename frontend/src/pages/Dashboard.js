@@ -7,13 +7,12 @@ function Dashboard() {
   const [type, setType] = useState("lent");
   const [loans, setLoans] = useState([]);
 
-  const fetchLoans = async () => {
-    const res = await API.get(`/loans?type=${type}`);
-    setLoans(res.data);
-    console.log("Fetching type:", type);
-  };
-
   useEffect(() => {
+    const fetchLoans = async () => {
+      const res = await API.get(`/loans?type=${type}`);
+      setLoans(res.data);
+      console.log("Fetching type:", type);
+    };
     fetchLoans();
   }, [type]);
 

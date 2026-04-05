@@ -3,7 +3,6 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import Register from "./pages/Register";
-import DotBackground from "../src/components/ui/DotBackground";
 import logo from "../src/components/ui/logo.png";
 
 function App() {
