@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import API from "../services/api";
 import LoanForm from "../components/LoanForm";
 import LoanList from "../components/LoanList";
@@ -7,14 +7,19 @@ function Dashboard() {
   const [type, setType] = useState("lent");
   const [loans, setLoans] = useState([]);
 
-  useEffect(() => {
-    const fetchLoans = async () => {
+  const fetchLoans = useCallback(async () => {
+    try {
       const res = await API.get(`/loans?type=${type}`);
       setLoans(res.data);
       console.log("Fetching type:", type);
-    };
-    fetchLoans();
+    } catch (error) {
+      console.error("Error fetching loans:", error);
+    }
   }, [type]);
+
+  useEffect(() => {
+    fetchLoans();
+  }, [fetchLoans]);
 
   const totalPrincipal = loans.reduce(
     (sum, loan) => sum + loan.principalAmount,
