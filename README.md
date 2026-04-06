@@ -3,9 +3,9 @@
 A full-stack MERN application designed to help individuals (and family members) track money lent to or borrowed from others. This app calculates interest, tracks unpaid months, and manages a history of closed transactions with a clean, responsive dashboard.
 
 🚀 Live Demo
-- Frontend: https://finance-tracker-app-darkfire.vercel.app
+- Frontend: [https://finance-tracker-app-darkfire.vercel.app](https://finance-tracker-app-darkfire.vercel.app)
 
-- Backend API: https://finance-tracker-app-backend-erb9.onrender.com
+- Backend API: [https://finance-tracker-app-backend-erb9.onrender.com](https://finance-tracker-app-backend-erb9.onrender.com)
 
 ✨ Key Features
 - Dashboard Overview: Real-time summary of total principal and interest due.
