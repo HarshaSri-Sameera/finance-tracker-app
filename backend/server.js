@@ -21,7 +21,8 @@ const app = express();
 // secure cors
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://finance-tracker-app-backend-erb9.onrender.com/",
+  "https://finance-tracker-app-backend-erb9.onrender.com",
+  "https://finance-tracker-app-darkfire.vercel.app",
 ];
 
 app.use(
